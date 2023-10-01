@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS-TASK-4</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+        }
+
+        button {
+            height: 70px;
+            width: 300px;
+            font-size: 20px;
+            cursor: pointer;
+            background-color: yellow;
+            transition: 0.4s ease-in-out;
+            border-radius: 10px;
+        }
+
+        .show-date,
+        .show-time {
+            font-size: 20px;
+            color: white;
+        }
+
+        button:hover {
+            background-color: orange;
+        }
+
+        h1,
+        h2 {
+            text-align: center;
+        }
+        .container{
+            padding-top: 200px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>TANMAY AGRAWAL</h1>
+    <H2>DATE AND TIME VIEWER</H2>
+    <div class="container">
+        <button class="d1">show date</button>
+        <p class="show-date"></p>
+        <button class="d2">show Time</button>
+        <p class="show-time"></p>
+    </div>
+    <script>
+        const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+        document.querySelector(".d2").addEventListener("click", function () {
+            let d = new Date();
+            document.querySelector(".show-time").innerHTML = d;
+        });
+        document.querySelector(".d1").addEventListener("click", function () {
+            let d = new Date();
+            document.querySelector(".show-date").innerHTML = d.getDate() + "/" + months[d.getMonth()] + "/" + d.getFullYear();
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS-TASK-1</title>
+    <style>
+        .contain {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        button {
+            height: 70px;
+            width: 300px;
+            font-size: 20px;
+            cursor: pointer;
+            background-color: yellow;
+            transition: 0.4s ease-in-out;
+            border-radius: 10px;
+        }
+
+        button:hover {
+            background-color: orange;
+        }
+    </style>
+</head>
+
+<body style="background-color: beige;">
+    <div class="contain">
+        <h2>TANMAY AGRAWAL</h2>
+        <button onclick="sorter()">Click here to give Input</button>
+    </div>
+    <script>
+        function sorter() {
+            let x = prompt("Enter a String");
+            let y = x.split("").sort().join("");
+            alert("The sorted string of " + x + " is " + y);
+        }
+    </script>
+</body>
+
+</html>

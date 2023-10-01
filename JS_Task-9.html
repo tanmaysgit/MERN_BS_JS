@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body{
+            background-color: rgba(0, 0, 0, 0.952);
+            color: white;
+        }
+        #container {
+            border: 5px solid rgb(126, 123, 123);
+            margin-left: auto;
+            margin-right: auto;
+            width: 400px;
+            height: 400px;
+            position: relative;
+            background: yellow;
+        }
+
+        #animate {
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            background-color: red;
+        }
+
+        button {
+            margin: 20px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="text-align: center; margin-top: 50px;"> ADITYA KUMAR PANDEY 21BCI0280</h1>
+    <P style="text-align: center; font-size: 30PX;"> MISSED JS EXERCISE </P>
+    <center><button onclick="myMove()">CLICK ME!</button></center>
+    <div id="container">
+        <div id="animate"></div>
+    </div>
+    <script>
+        function myMove() {
+            let id = null;
+            const elem = document.getElementById("animate");
+            let pos = 0;
+
+            clearInterval(id);
+            id = setInterval(frame, 5);
+
+            function frame() {
+                if (pos >= 350) {
+                    elem.style.left = 0 + "px";
+                    elem.style.top = 0 + "px";
+                    clearInterval(id);
+                } else {
+                    elem.style.top = pos + "px";
+                    elem.style.left = pos + "px";
+                    pos++;
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
